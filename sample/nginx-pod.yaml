@@ -1,0 +1,8 @@
+apiVersion: v1     # 아래 표 파드 API 참조
+kind: Pod
+metadata:
+  name: nginx
+spec:             # pod 사양         
+  containers:     # 컨테이너 기동 조건 설정
+  - name: nginx
+    image: nginx:latest
