@@ -25,12 +25,9 @@ serviceAccount:
 rbac:
   create: true
   rules:
-    - apiGroups:
-        - "*"
-      ressources:
-        - "*"
-      verbs:
-        - "*"
+    - apiGroups: ["*"]
+      resources: ["*"]
+      verbs: ["*"]
 
 postgresql:
   enabled: true
