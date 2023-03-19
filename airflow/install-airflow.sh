@@ -10,5 +10,5 @@ if [ $HAS_NS != "true" ]; then
     kubectl create namespace $NAMESPACE_NAME
 fi
 
-# minio 설치
-helm upgrade --install -f values-airflow.yaml airflow ./$AIRFLOW_TGZ --namespace $NAME_SPACE
+# airflow 설치
+helm upgrade --install -f config-airflow.yaml airflow ./$AIRFLOW_TGZ -n $NAMESPACE_NAME
