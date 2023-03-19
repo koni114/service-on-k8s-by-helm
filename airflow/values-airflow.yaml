@@ -14,7 +14,7 @@ global:
   ##   - myRegistryKeySecretName
   ##
   imagePullSecrets: []
-  storageClass: "managed-nfs-storage"
+  storageClass: ""
 
 ## @section Common parameters
 
@@ -62,10 +62,10 @@ diagnosticMode:
 auth:
   ## @param auth.username Username to access web UI
   ##
-  username: posml
+  username: user
   ## @param auth.password Password to access web UI
   ##
-  password: "posml!23"
+  password: ""
   ## @param auth.fernetKey Fernet key to secure connections
   ## ref: https://airflow.readthedocs.io/en/stable/howto/secure-connections.html
   ## ref: https://bcb.github.io/airflow/fernet-key
@@ -84,7 +84,7 @@ auth:
 ## @param executor Airflow executor. Allowed values: `SequentialExecutor`, `LocalExecutor`, `CeleryExecutor`, `KubernetesExecutor`, `CeleryKubernetesExecutor` and `LocalKubernetesExecutor`
 ## ref: http://airflow.apache.org/docs/stable/executor/index.html
 ##
-executor: KubernetesExecutor
+executor: CeleryExecutor
 ## @param loadExamples Switch to load some Airflow examples
 ##
 loadExamples: false

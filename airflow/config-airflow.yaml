@@ -1,0 +1,33 @@
+global:
+  imageRegistry: ""
+  imagePullSecrets: []
+  storageClass: "managed-nfs-storage"
+
+auth:
+  username: posml
+  password: "posml!23"
+
+executor: KubernetesExecutor
+
+service:
+  type: NodePort
+  ports:
+    http: 8080
+  nodePorts:
+    http: "30010"
+
+serviceAccount:
+  create: true
+  name: "posml"
+  automountServiceAccountToken: true
+  annotations: {}
+
+postgresql:
+  enabled: true
+  auth:
+    enablePostgresUser: false
+    username: bn_airflow
+    password: ""
+    database: bitnami_airflow
+    existingSecret: ""
+  architecture: standalone
