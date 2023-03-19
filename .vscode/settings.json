@@ -1,0 +1,6 @@
+{
+    "yaml.schemas": {
+        "kubernetes": "*.yaml",
+        "https://json.schemastore.org/helmfile.json": "file:///Users/koni114/gitRepo/service-on-k8s-by-helm/airflow/values-airflow.yaml"
+    }
+}
