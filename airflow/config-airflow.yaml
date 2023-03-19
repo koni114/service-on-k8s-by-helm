@@ -33,8 +33,8 @@ postgresql:
   enabled: true
   auth:
     enablePostgresUser: false
-    username: bn_airflow
-    password: ""
+    username: posml
+    password: "posml!23"
     database: bitnami_airflow
     existingSecret: ""
   architecture: standalone
